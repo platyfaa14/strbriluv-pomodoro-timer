@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Strbriluv Pomodoro Timer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="logo">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo Strbriluv">
+    </div>
+    <div class="container">
+        <h1>
+            Strbriluv Pomodoro Timer
+            <img src="{{ url_for('static', filename='img/icon.png') }}" alt="Icon" class="title-icon">
+        </h1>
+        <div class="timer" id="timer">30:00</div>
+        <div class="buttons">
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
