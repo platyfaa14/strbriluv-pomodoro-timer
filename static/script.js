@@ -30,6 +30,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const alarmSound = new Audio("/static/audio/cute-sound-for-videos-397053.mp3");
     alarmSound.volume = 1.0;
 
+    const workQuotes = [
+        "Focus on progress, not perfection",
+        "One pomodoro at a time 🍓",
+        "Small steps lead to big results", 
+        "You're doing great! Keep going 💪",
+        "Every great achievement begins with a single pomodoro"
+    ];
+
+    const breakQuotes = [
+        "Resting is productive too 🍓",
+        "Enjoy your break! You earned it",
+        "Time to recharge ⚡",
+        "Stretch and breathe 🌸",
+        "Resting is part of the process 🍓"
+    ];
+
     let taskName = "";
     let timer;
     let timeLeft = 0;
@@ -59,6 +75,19 @@ document.addEventListener('DOMContentLoaded', function() {
           p.style.display = 'none';
         });
         page.style.display = 'flex';
+
+        if (page === workPage) updateMotivationQuote("work");
+        if (page === breakPage) updateMotivationQuote("break");
+    }
+
+    function updateMotivationQuote(mode) {
+        const quotes = mode === "work" ? workQuotes : breakQuotes;
+        const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+        const quoteElement = document.querySelector('.motivation-quote p');
+        if (quoteElement) {
+            quoteElement.textContent = '"' + randomQuote + '"';
+        }
     }
 
     function updateSessionIndicator() {

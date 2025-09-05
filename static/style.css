@@ -6,7 +6,7 @@
     --primary: #ff6699;
     --accent: #ff3b6b;
     --muted: #ffdce8;
-    --text: #3b2b2b;
+    --text: 3b2b2b;
     --glass: rgba(255,255,255,0.75);
     --shadow: 0 8px 20px rgba(255,90,140,0.12);
 }
@@ -283,6 +283,25 @@ p {
     font-size: 0.9rem; 
 }
 
+.motivation-quote {
+    margin-top: auto;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+    padding: 0 15px;
+}
+
+.motivation-quote p {
+    font-style: italic;
+    color: #e88a99;
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 1.4;
+    margin: 0;
+}
+
 @media (max-width:420px){
     .app {
         padding: 15px;
@@ -305,7 +324,7 @@ p {
         font-size: clamp(1.9rem, 12vw, 3.2rem); 
         min-width: 120px; 
         padding: 12px 16px; 
-        border-radius:14px; 
+        border-radius: 14px;
     }
     .buttons button{
         padding: 9px 14px;
@@ -315,5 +334,15 @@ p {
     .session-dot {
         height: 8px;
         width: 8px;
+    }
+
+    .motivation-quote {
+        margin-top: auto;
+        margin-bottom: 8px;
+        min-height: 50px;
+    }
+    
+    .motivation-quote p {
+        font-size: 0.9rem;
     }
 }
