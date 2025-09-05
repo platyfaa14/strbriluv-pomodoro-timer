@@ -1,27 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Strbriluv Pomodoro Timer</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strbriluv Pomodoro Timer !</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
 </head>
 <body>
-    <div class="logo">
-        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo Strbriluv">
+    <div id="splash" class="splash">
+        <h1>STRBRILUV</h1>
+        <p>Study sweeter with this strawberry timer! 🍓</p>
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Strawberry" class="splash-img">
+        <button id="start-splash" class="btn-primary">START</button>
     </div>
-    <div class="container">
-        <h1>
-            Strbriluv Pomodoro Timer
-            <img src="{{ url_for('static', filename='img/icon.png') }}" alt="Icon" class="title-icon">
-        </h1>
-        <div class="timer" id="timer">30:00</div>
-        <div class="buttons">
-            <button id="start">Start</button>
-            <button id="pause">Pause</button>
-            <button id="reset">Reset</button>
+
+    <div id="app" class="hidden">
+        <div class="container">
+            <section id="set-task" class="page">
+                <h2>SET YOUR TASK</h2>
+                <p>Write down the task you want to achieve during this session</p>
+                <input type="text" id="task-input" placeholder="e.g. Study with strawberries 🍓" />
+                <input type="number" id="task-duration" placeholder="Duration (minutes)" min="1" />
+                <button id="set-task-btn" class="btn-primary">SET TIMER</button>
+            </section>
+
+            <section id="work-timer" class="page hidden">
+                <button class="back-button">← Edit Task</button>
+                <h2>LET'S GO !</h2>
+                <p id="current-task"></p>
+                <div id="work-time" class="timer">25:00</div>
+                
+                <div class="session-indicator">
+                    <span class="session-dot"></span>
+                    <span class="session-dot"></span>
+                    <span class="session-dot"></span>
+                    <span class="session-dot"></span>
+                </div>
+                
+                <div class="buttons">
+                    <button id="start-work">Start</button>
+                    <button id="pause-work">Pause</button>
+                    <button id="reset-work">Reset</button>
+                </div>
+            </section>
+
+            <section id="break-timer" class="page hidden">
+                <button class="back-button">← Edit Task</button>
+                <h2>BREAK TIME !</h2>
+                <p id="break-task">Time to rest 🍓</p>
+                <div id="break-time" class="timer">05:00</div>
+                <div class="buttons">
+                    <button id="start-break">Start Break</button>
+                    <button id="pause-break">Pause</button>
+                    <button id="reset-break">Reset</button>
+                </div>
+            </section>
         </div>
     </div>
-<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
