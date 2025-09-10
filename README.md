@@ -24,7 +24,7 @@ A beautiful, strawberry-themed Pomodoro timer web application to help you study 
 ## 🎉 About This Project
 
 This is my **very first coding project**!  
-Built from scratch in 9 days (August 28 – September 5, 2024) as a complete beginner with zero prior programming experience.
+Built from scratch in 9 days (August 28 – September 5, 2025) as a complete beginner with zero prior programming experience.
 
 This project represents my journey into web development and showcases what's possible with passion and persistence.
 
